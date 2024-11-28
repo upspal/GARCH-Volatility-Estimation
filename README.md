@@ -13,6 +13,13 @@ This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys
 | 9M     | 1.4859       | 23.59                 |
 | Full   | 1.4170       | 22.49                 |
 
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+    <img src="plots/TCS-3M.png" width="400"/>
+    <img src="plots/TCS-6M.png" width="400"/>
+    <img src="plots/TCS-9M.png" width="400"/>
+    <img src="plots/TCS-FULL.png" width="400"/>
+</div>
+
 #### Infosys
 | Period | Raw Volatility | Annualized Volatility (%) |
 |--------|---------------|------------------------|
@@ -20,6 +27,13 @@ This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys
 | 6M     | 1.5318       | 24.32                 |
 | 9M     | 1.4759       | 23.43                 |
 | Full   | 1.5558       | 24.70                 |
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+    <img src="plots/INFY-3M.png" width="400"/>
+    <img src="plots/INFY-6M.png" width="400"/>
+    <img src="plots/INFY-9M.png" width="400"/>
+    <img src="plots/INFY-FULL.png" width="400"/>
+</div>
 
 #### Bajaj
 | Period | Raw Volatility | Annualized Volatility (%) |
@@ -29,6 +43,13 @@ This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys
 | 9M     | 1.4769       | 23.44                 |
 | Full   | 1.4782       | 23.47                 |
 
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+    <img src="plots/BAJAJ-3M.png" width="400"/>
+    <img src="plots/BAJAJ-6M.png" width="400"/>
+    <img src="plots/BAJAJ-9M.png" width="400"/>
+    <img src="plots/BAJAJ-FULL.png" width="400"/>
+</div>
+
 #### Asian Paints
 | Period | Raw Volatility | Annualized Volatility (%) |
 |--------|---------------|------------------------|
@@ -36,6 +57,13 @@ This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys
 | 6M     | 1.4446       | 22.93                 |
 | 9M     | 1.3748       | 21.82                 |
 | Full   | 1.4933       | 23.71                 |
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+    <img src="plots/ASIAN-3M.png" width="400"/>
+    <img src="plots/ASIAN-6M.png" width="400"/>
+    <img src="plots/ASIAN-9M.png" width="400"/>
+    <img src="plots/ASIAN-FULL.png" width="400"/>
+</div>
 
 ## Key Findings
 
