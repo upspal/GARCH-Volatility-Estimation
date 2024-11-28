@@ -1,10 +1,44 @@
 # GARCH-Volatility-Estimation
 
-This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys, Asian Paints, and Bajaj over various timeframes. The analysis was conducted using the GARCH.ipynb notebook.
+This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys, Asian Paints, and Bajaj over various timeframes. Alongside volatility estimations, a rolling window protocol was implented with the window size equal to 1 trading year to compare the actual vs forecasted volatility over the window. Finally, we used the estimated volatility to forecast future volatility over the time-horizon of 2 weeks i.e 14 days. The analysis was conducted using the GARCH.ipynb notebook.
+## Data
+The data used in this project was sourced from Yahoo Finance and includes the stock prices for the following companies:
+- TCS (Tata Consultancy Services)
+- Infosys
+- Asian Paints
+- Bajaj Finance
 
-## Results Summary
+The data is stored in the `data` folder as CSV files, with each file containing the stock prices for a specific company.
+The data includes the following columns:
+
+- `Date`: The date of the stock price
+- `Close`: The closing price of the stock
+## GARCH Model
+The Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model is a time series model used to estimate the volatility of financial returns. It is an extension of the ARCH model that allows for the conditional variance to be modeled as a function of past variances and past squared errors. The GARCH(1,1) model is given by the following equations:
+
+\[
+\begin{align*}
+Y_t &= \sigma_t \epsilon_t \\
+\sigma_t^2 &= \omega + \alpha Y_{t-1}^2 + \beta \sigma_{t-1}^2
+\end{align*}
+\]
+
+where:
+- \(Y_t\) is the return at time \(t\)
+- \(\sigma_t^2\) is the conditional variance at time \(t\)
+- \(\epsilon_t\) is the standardized error term at time \(t\)
+- \(\omega\), \(\alpha\), and \(\beta\) are the parameters of the model
+
+The GARCH model is used to estimate the conditional variance of the returns, which can then be used to calculate the volatility of the returns.
+## Methodology
+The analysis was conducted in the following steps:
+1. **Data Preprocessing:** The stock prices were used to calculate the log returns, which were then used to estimate the GARCH model parameters.
+2. **Model Estimation:** The GARCH(1,1) model was estimated using the `arch` library in Python, and the volatility was calculated for different time periods (3 months, 6 months, 9 months, and full period).
+3. **Volatility Forecasting:** The estimated GARCH model was used to forecast the future volatility over a 2-week horizon (14 days) for each company.
+4. **Rolling Window Analysis:** A rolling window protocol was implemented to compare the actual vs forecasted volatility over a 1-year window for each company.
+## Results
+The analysis provides insights into the volatility of the stock prices for each company over different time periods. The results include the raw volatility estimates, annualized volatility, and visualizations of the volatility estimates. The rolling window protocol helps evaluate the performance of the model in forecasting volatility over time. The forecasted volatility can be used to make informed decisions about future price movements.
 ### Volatility Analysis by Company
-
 #### TCS
 | Period | Raw Volatility | Annualized Volatility (%) |
 |--------|---------------|------------------------|
@@ -18,6 +52,10 @@ This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys
     <img src="plots/TCS-6M.png" width="400"/>
     <img src="plots/TCS-9M.png" width="400"/>
     <img src="plots/TCS-FULL.png" width="400"/>
+    <img src="plots/TCS-ROLLING.png" width="400"/>
+    <img src="plots/TCS-FORECAST.png" width="400"/>
+</div>
+
 </div>
 
 #### Infosys
@@ -33,6 +71,8 @@ This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys
     <img src="plots/INFY-6M.png" width="400"/>
     <img src="plots/INFY-9M.png" width="400"/>
     <img src="plots/INFY-FULL.png" width="400"/>
+    <img src="plots/INFY-ROLLING.png" width="400"/>
+    <img src="plots/INFY-FORECAST.png" width="400"/>
 </div>
 
 #### Bajaj
@@ -48,6 +88,8 @@ This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys
     <img src="plots/BAJAJ-6M.png" width="400"/>
     <img src="plots/BAJAJ-9M.png" width="400"/>
     <img src="plots/BAJAJ-FULL.png" width="400"/>
+    <img src="plots/BAJAJ-ROLLING.png" width="400"/>
+    <img src="plots/BAJAJ-FORECAST.png" width="400"/>
 </div>
 
 #### Asian Paints
@@ -63,6 +105,9 @@ This project implements GARCH(1,1) model to estimate volatility for TCS, Infosys
     <img src="plots/ASIAN-6M.png" width="400"/>
     <img src="plots/ASIAN-9M.png" width="400"/>
     <img src="plots/ASIAN-FULL.png" width="400"/>
+    <img src="plots/ASIAN-ROLLING.png" width="400"/>
+    <img src="plots/ASIAN-FORECAST.png" width="400"/>
+</div>
 </div>
 
 ## Key Findings
