@@ -16,18 +16,18 @@ The data includes the following columns:
 ## GARCH Model
 The Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model is a time series model used to estimate the volatility of financial returns. It is an extension of the ARCH model that allows for the conditional variance to be modeled as a function of past variances and past squared errors. The GARCH(1,1) model is given by the following equations:
 
-\[
-\begin{align*}
+$$
+\begin{align}
 Y_t &= \sigma_t \epsilon_t \\
 \sigma_t^2 &= \omega + \alpha Y_{t-1}^2 + \beta \sigma_{t-1}^2
-\end{align*}
-\]
+\end{align}
+$$
 
 where:
-- \(Y_t\) is the return at time \(t\)
-- \(\sigma_t^2\) is the conditional variance at time \(t\)
-- \(\epsilon_t\) is the standardized error term at time \(t\)
-- \(\omega\), \(\alpha\), and \(\beta\) are the parameters of the model
+- $Y_t$ is the return at time $t$
+- $\sigma_t^2$ is the conditional variance at time $t$
+- $\epsilon_t$ is the standardized error term at time $t$
+- $\omega$, $\alpha$, and $\beta$ are the parameters of the model
 
 The GARCH model is used to estimate the conditional variance of the returns, which can then be used to calculate the volatility of the returns.
 ## Methodology
