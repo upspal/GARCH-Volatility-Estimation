@@ -13,6 +13,7 @@ The data includes the following columns:
 
 - `Date`: The date of the stock price
 - `Close`: The closing price of the stock
+- `Daily Returns`: The daily returns of the stock calculated as: $\frac{P_t - P_{t-1}}{P_{t-1}}$, where $P_t$ is the closing price at time t
 ## GARCH Model
 The Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model is a time series model used to estimate the volatility of financial returns. It is an extension of the ARCH model that allows for the conditional variance to be modeled as a function of past variances and past squared errors. The GARCH(1,1) model is given by the following equations:
 
