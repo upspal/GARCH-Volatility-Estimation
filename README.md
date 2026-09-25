@@ -75,12 +75,12 @@ To use local CSV files instead of Yahoo Finance, set `USE_YFINANCE = False` and 
 ## Plots
 
 <div>
-    <img src="plots/tcs.png" width="400"/>
-    <img src="plots/infosys.png" width="400"/>
-    <img src="plots/bfin.png" width="400"/>
-    <img src="plots/apaint.png" width="400"/>
-    <img src="plots/tcsvar.png" width="400"/>
-    <img src="plots/infosysvar.png" width="400"/>
-    <img src="plots/bfinvar.png" width="400"/>
-    <img src="plots/apaintvar.png" width="400"/>
+    <img src="plots/tcs.png" width="800"/>
+    <img src="plots/infosys.png" width="800"/>
+    <img src="plots/bfin.png" width="800"/>
+    <img src="plots/apaint.png" width="800"/>
+    <img src="plots/tcsvar.png" width="800"/>
+    <img src="plots/infosysvar.png" width="800"/>
+    <img src="plots/bfinvar.png" width="800"/>
+    <img src="plots/apaintvar.png" width="800"/>
 </div>
