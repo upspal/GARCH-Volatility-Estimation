@@ -72,3 +72,15 @@ Run all cells. With daily refitting, the rolling forecasts take a few minutes; s
 
 To use local CSV files instead of Yahoo Finance, set `USE_YFINANCE = False` and place files named `tcs.csv`, `infosys.csv`, `asianpaints.csv` and `bajaj.csv` in a `data/` folder, with a `Date` column and an `Adj Close` (or `Close`) column.
 
+## Plots
+
+<div>
+    <img src="plots/tcs.png" width="400"/>
+    <img src="plots/infosys.png" width="400"/>
+    <img src="plots/bfin.png" width="400"/>
+    <img src="plots/apaint.png" width="400"/>
+    <img src="plots/tcsvar.png" width="400"/>
+    <img src="plots/infosysvar.png" width="400"/>
+    <img src="plots/bfinvar.png" width="400"/>
+    <img src="plots/apaintvar.png" width="400"/>
+</div>
